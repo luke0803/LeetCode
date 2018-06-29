@@ -15,8 +15,6 @@ public:
             else stk.push(c);
         }
         top = stk.top();
-        if(top == '#') return true;
-        else           return false;
-        
+        return top == '#';
     }
 };
