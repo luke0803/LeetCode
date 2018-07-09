@@ -9,6 +9,13 @@ Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
+
+#分析:
+return 一個 vector<int> result
+
+首先建立一個存int的Hash Map，Key is the number and value is its index in the vector
+從i=0~nums.size()-1，定義一個int numberToFind = target - nums[i]
+如果在Hash Map中有找到numberToFind 就把index丟進result中，如果沒找到則把這個number放到Hash Map的key中，index放到對應的value中
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 class Solution {
